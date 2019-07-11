@@ -1,0 +1,23 @@
+.timer-panel {
+  font-size: 140%;
+}
+.timer-panel > * {
+  margin-bottom: .75em;
+}
+.timer-panel .label {
+  color: gray;
+  font-variant: all-small-caps;
+  font-weight: bold;
+}
+.timer-panel .value {
+  color: dimgray;
+  /*font-size: 110%;*/
+  font-weight: bold;
+}
+.version {
+  color: gray;
+  font-size: 85%;
+  font-weight: bold;
+  font-variant: all-small-caps;
+  margin-top: 1em;
+}

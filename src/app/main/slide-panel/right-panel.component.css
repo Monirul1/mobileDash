@@ -1,0 +1,8 @@
+.slide-panel {
+  width: 20em;
+  height: 100vh;
+  padding: .75em;
+  background: white;
+  border-left: dotted .05em darkgray;
+  overflow-y: auto;
+}

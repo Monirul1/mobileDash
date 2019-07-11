@@ -1,0 +1,19 @@
+<div class="timer-panel">
+  <div>
+    <span class="label">Dashboard:</span>
+    <span class="value">{{ schemaName || '--' }}</span>
+  </div>
+  <div>
+    <span class="label">Polling:</span>
+    <span class="value clickable" (click)="onToggle()">{{ polling ? 'ON' : 'OFF' }}</span>
+  </div>
+  <div>
+    <span class="label">Elapsed:</span>
+    <span class="value">{{ formatElapsed(pollingTimeElapsed) }}</span>
+  </div>
+  <div>
+    <span class="label">Avg/Node:</span>
+    <span class="value">{{ formatNodeTime(avgTimePerNode) }}</span>
+  </div>
+  <div class="version">Dashboard version {{ version }}</div>
+</div>

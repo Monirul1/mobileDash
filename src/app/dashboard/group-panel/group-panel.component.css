@@ -1,0 +1,19 @@
+.group-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0.25em;
+  margin: 0.5em;
+}
+.group-panel-wrap {
+  flex-flow: row wrap;
+}
+.group-panel-wrap.group-1-across {
+  width: 12.5em;
+}
+.group-panel-wrap.group-2-across {
+  width: 21.5em;
+}
+.group-panel-wrap.group-3-across {
+  width: 32em;
+}

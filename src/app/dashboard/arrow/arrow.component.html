@@ -1,0 +1,29 @@
+<svg height="210" width="500">
+
+  <defs>
+    <marker
+      *ngFor="let status of statuses"
+      [attr.id]="'arrowHead-' + status"
+      markerWidth="10" markerHeight="10"
+      refX="6" refY="3" orient="auto">
+
+      <path d="M0,0 L0,6 L6,3 z"
+        [ngStyle]="{ fill: arrowColors[status] }" >
+
+      </path>
+
+    </marker>
+  </defs>
+
+  <line [attr.x1]="x1" [attr.y1]="y1" [attr.x2]="x2" [attr.y2]="y2"
+        [ngClass]="{
+          arrow: true,
+          arrowGood: arrow.status === 'good',
+          arrowWarning: arrow.status === 'warning',
+          arrowError: arrow.status === 'error',
+          arrowRunning: arrow.status === 'running',
+          arrowIdle: arrow.status === 'idle',
+          arrowNone: arrow.status === 'none' }"
+        [ngStyle]="{ stroke: arrowColors[arrow.status] }"></line>
+
+</svg>

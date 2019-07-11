@@ -1,0 +1,12 @@
+<div class="node-panel panel clickable"
+    [attr.id]="node.id"
+    [appStatus]="node.overallStatus"
+    [ngClass]="{
+      'node-panel-narrow': node.group && node.group.wrap,
+      'style-uncertain': node.statusUncertain }"
+    (click)="onClick()">
+
+  <div class="node-panel-title">{{ node.label }}</div>
+  <!--<div *ngIf="isOffline(node)" style="width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{ node.offlineReason }}</div>-->
+
+</div>

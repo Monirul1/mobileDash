@@ -1,0 +1,19 @@
+<div class="across" [ngClass]="{ 'across-centered': !schema.vertical }">
+  <div class="down" *ngFor="let column of columns">
+    <ng-container *ngFor="let item of column">
+
+      <app-group-panel
+        *ngIf="item.itemAsGroup"
+        [group]="item.itemAsGroup"
+        [attr.id]="'x-' + item.id"></app-group-panel>
+
+      <app-node-panel
+        *ngIf="item.itemAsNode"
+        [node]="item.itemAsNode"
+        [attr.id]="'x-' + item.id"></app-node-panel>
+
+    </ng-container>
+  </div>
+
+  <app-arrow *ngFor="let arrow of arrows" [arrow]="arrow"></app-arrow>
+</div>

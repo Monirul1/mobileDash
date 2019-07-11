@@ -1,0 +1,20 @@
+<app-left-panel>
+  <app-timer-pane></app-timer-pane>
+  <div *ngIf="showDevControls">
+    <button class="btn btn-link" (click)="toggleStatusPanel()">
+      {{ showRightPanel ? 'Hide' : 'Show'}} status panel
+    </button>
+  </div>
+</app-left-panel>
+
+<div class="main" [ngClass]="{ dev: showDevControls }">
+  <div class="top" [ngClass]="{ dev: showDevControls }">
+    <div class="left-spaceholder"></div>
+    <app-dashboard [ngClass]="{ fullHeight: !showDevControls }"></app-dashboard>
+  </div>
+  <app-test-panel *ngIf="showDevControls"></app-test-panel>
+</div>
+
+<app-right-panel *ngIf="showRightPanel">
+  <app-message-list></app-message-list>
+</app-right-panel>

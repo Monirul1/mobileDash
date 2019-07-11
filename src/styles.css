@@ -1,0 +1,91 @@
+body {
+  background-color: lightgray;
+  margin: 0;
+  font-size: 12px;
+}
+/*
+media queries from: https://css-tricks.com/snippets/css/fluid-typography/
+body {
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}
+*/
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: calc(12px + 28 * ((100vw - 1200px) / 2800));
+  }
+}
+@media screen and (min-width: 4000px) {
+  body {
+    font-size: 40px;
+  }
+}
+.panel {
+  background-color: whitesmoke;
+  box-shadow: 0 .1em .25em rgba(0,0,0,.2);
+  padding: 1em;
+}
+.node-panel {
+  padding: 1em;
+  margin: 0.25em;
+  min-width: 14em;
+  max-width: 14em;
+  text-align: center;
+  background-color: lightsteelblue;
+}
+.node-panel-narrow {
+  min-width: 10em;
+  max-width: 10em;
+}
+.node-panel-title {
+  font-weight: 500;
+  color: whitesmoke;
+  text-shadow:
+    -.05em -.05em 0 dimgray,
+    .05em -.05em 0 dimgray,
+    -.05em .05em 0 dimgray,
+    .05em .05em 0 dimgray;
+}
+.node-panel-detail {
+  font-size: 70%;
+  color: whitesmoke;
+  text-shadow:
+    -.05em -.05em 0 dimgray,
+    .05em -.05em 0 dimgray,
+    -.05em .05em 0 dimgray,
+    .05em .05em 0 dimgray;
+  text-align: center;
+}
+.clickable {
+  cursor: pointer;
+}
+.style-good {
+  background-color: rgb(55, 155, 55);
+}
+.style-warning {
+  background-color: rgb(219, 123, 43);
+}
+.style-error {
+  background-color: rgb(210, 0, 20);
+}
+.style-none {
+  background-color: darkgray;
+}
+.style-idle {
+  background-color: rgb(55, 125, 55);
+}
+.style-running { /* animated diagonal bars */
+  background-color: rgb(20,180,0);
+  background-size: 2em 2em;
+  background-image: linear-gradient(135deg,
+    rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%,
+    rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  animation: animate-stripes 5s linear infinite;
+}
+@keyframes animate-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 3.75em 0; }
+}
+.style-uncertain { /* diagonal bars - no animation */
+  animation: none;
+  opacity: .6;
+}

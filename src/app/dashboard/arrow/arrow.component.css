@@ -1,0 +1,18 @@
+svg {
+  overflow: visible;
+}
+.arrow {
+  stroke-width: 3;
+}
+.arrowGood {
+  marker-end: url(#arrowHead-good);
+}
+.arrowWarning {
+  marker-end: url(#arrowHead-warning);
+}
+.arrowError {
+  marker-end: url(#arrowHead-error);
+}
+.arrowNone {
+  marker-end: url(#arrowHead-none);
+}

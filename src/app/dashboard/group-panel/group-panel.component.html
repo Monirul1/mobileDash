@@ -1,0 +1,30 @@
+<div class="group-panel panel"
+     [attr.id]="group.id"
+     [ngClass]="{
+        'group-panel-wrap': group.wrap,
+        'group-1-across': group.numAcross === 1,
+        'group-2-across': group.numAcross === 2,
+        'group-3-across': group.numAcross === 3}">
+
+  <div *ngFor="let rollup of group.rollups"
+       class="node-panel panel clickable"
+       [ngClass]="{ 'node-panel-narrow': group.wrap }"
+       [attr.id]="rollup.id"
+       [appStatus]="rollup.status"
+       (click)="onClick(rollup.nodes)">
+
+    <div class="node-panel-title">{{ group.label }}</div>
+
+    <div *ngIf="isBad(rollup.status)"
+         class="node-panel-detail">
+      {{ getBrands(rollup.nodes) }}
+    </div>
+
+  </div>
+
+  <app-node-panel
+    *ngFor="let node of group.breakouts"
+    [attr.id]="'x-' + node.id"
+    [node]="node"></app-node-panel>
+
+</div>

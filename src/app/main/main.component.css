@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5em;
+  height: calc(100vh - 3em);
+}
+.main.dev {
+  justify-content: flex-start;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+}
+.top.dev {
+  height: 100%;
+  margin-bottom: 0;
+}
+.left-spaceholder {
+  flex: 0 0 10em;
+}
+app-dashboard {
+  flex: 1 1 auto;
+}
+.fullHeight {
+  height: 95%;
+}
+app-right-panel {
+  position: absolute;
+  top: 0;
+  left: calc(100vw - 20em);
+  float: right;
+}
+app-left-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  margin: 1.5em;
+}
+button.btn-link {
+  padding: 0;
+  font-size: 100%;
+}

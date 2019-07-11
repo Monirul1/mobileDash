@@ -1,0 +1,10 @@
+<div>
+  <span>For Testing: Click on node to simulate status changes:</span>
+  <div class="test-row">
+    <div *ngFor="let node of nodes"
+         [appStatus]="node.status"
+         (click)="onClick(node)">
+      {{ node.label }}
+    </div>
+  </div>
+</div>

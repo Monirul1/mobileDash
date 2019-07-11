@@ -1,0 +1,27 @@
+.across {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+}
+.across-centered {
+  align-items: center;
+}
+.down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.down > * {
+  margin-bottom: 3em;
+}
+.down > *:last-child {
+  margin-bottom: 0;
+}
+app-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
